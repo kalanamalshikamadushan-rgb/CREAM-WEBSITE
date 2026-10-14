@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | LUMIÈRE CRÈME PARIS</title>
+  <meta name="description" content="Discover the formulation, active ingredients, and clinical results of our luxury French skincare creams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container">
+      <div class="announcement-messages">
+        <div class="announcement-msg active">
+          ✨ Complimentary Express Shipping on Orders Over $80 • Clean French Formulation
+        </div>
+        <div class="announcement-msg">
+          Use VIP Code <strong>GLOW20</strong> for 20% Off Your First Ritual Purchase
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Luxury Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link active">The Creams</a>
+            <a href="routine.html" class="nav-link">Skin Quiz</a>
+            <a href="about.html" class="nav-link">Our Heritage</a>
+            <a href="contact.html" class="nav-link">Consultation</a>
+          </nav>
+        </div>
+
+        <div class="brand-logo">
+          <a href="index.html">
+            <span class="logo-main">Lumière Crème</span>
+            <span class="logo-tagline">Paris • Haute Botanique</span>
+          </a>
+        </div>
+
+        <div class="header-actions">
+          <button class="action-icon-btn open-search-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <a href="products.html" class="action-icon-btn" title="Saved Wishlist" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-badge-count" style="display: none;">0</span>
+          </a>
+
+          <button class="action-icon-btn open-cart-btn" aria-label="Shopping bag">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="badge-count cart-badge-count" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-nav">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="products.html">The Creams</a>
+      <span class="breadcrumb-sep">/</span>
+      <span id="breadcrumb-current-product">Crème Veloutée Intense</span>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="pdp-section">
+      <div class="pdp-grid">
+        <!-- Gallery -->
+        <div class="pdp-gallery">
+          <div class="pdp-main-image-wrap">
+            <img id="pdp-main-img" src="" alt="Main Product Image">
+          </div>
+          <div class="pdp-thumbs-row" id="pdp-thumbs">
+            <!-- Thumbs injected by JS -->
+          </div>
+        </div>
+
+        <!-- Details Info -->
+        <div class="pdp-info-column">
+          <div class="pdp-header">
+            <div style="display: flex; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <span class="luxury-pill" id="pdp-category-tag">Face Creams</span>
+              <span class="luxury-pill gold" id="pdp-badge-tag" style="display: none;">Award Winner</span>
+            </div>
+            <h1 class="pdp-title" id="pdp-name">Crème Veloutée Intense</h1>
+            <p class="pdp-subtitle" id="pdp-subtitle">Ultra-Rich Barrier Restorative Face Cream</p>
+            
+            <div class="pdp-rating">
+              <span style="color: #D4AF37;">★★★★★</span>
+              <strong id="pdp-rating-num">4.9</strong>
+              <span style="color: var(--color-text-muted);" id="pdp-review-count">(328 reviews)</span>
+              <span style="margin-left: auto; color: var(--color-gold); font-size: 0.8rem; font-weight: 600;">✦ Hand-Poured in Provence</span>
+            </div>
+          </div>
+
+          <div class="pdp-pricing-box">
+            <span class="pdp-price" id="pdp-price">$88.00</span>
+            <span class="pdp-original-price" id="pdp-original-price">$110.00</span>
+            <span class="pdp-size" id="pdp-size">50ml / 1.7 fl. oz.</span>
+          </div>
+
+          <p class="pdp-short-desc" id="pdp-description">
+            A deeply nourishing, cloud-soft barrier cream formulated with 5 biomimetic ceramides...
+          </p>
+
+          <div class="pdp-highlights" id="pdp-benefits">
+            <!-- Injected by JS -->
+          </div>
+
+          <div style="margin: 1.5rem 0; font-size: 0.85rem; color: var(--color-text-muted);">
+            <div><strong>Tactile Texture:</strong> <span id="pdp-texture">Whipped Velvet Soufflé</span></div>
+            <div style="margin-top: 0.3rem;"><strong>Aromatherapeutic Scent:</strong> <span id="pdp-scent">Damask Rose & White Tea</span></div>
+          </div>
+
+          <!-- Add to Cart CTAs -->
+          <div class="pdp-cta-row">
+            <div class="qty-selector">
+              <button class="qty-btn" onclick="decreasePdpQty()">-</button>
+              <input type="number" id="pdp-qty-input" value="1" min="1" readonly>
+              <button class="qty-btn" onclick="increasePdpQty()">+</button>
+            </div>
+
+            <button class="btn btn-luxury-primary flex-1" id="pdp-add-cart-btn" onclick="submitPdpAdd()">
+              Add To Ritual • <span id="pdp-btn-price">$88.00</span>
+            </button>
+
+            <button class="wishlist-btn" id="pdp-wishlist-toggle" style="position: static; width: 48px; height: 48px;" onclick="togglePdpWishlist()">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <button class="btn btn-secondary-outline" style="width: 100%; margin-bottom: 2.5rem;" onclick="buyNowPdp()">
+            Express Checkout with Free Gift
+          </button>
+
+          <!-- Accordion Tabs -->
+          <div class="pdp-accordion">
+            <div class="accordion-item open">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>The Application Ritual & Technique</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body" id="pdp-how-to-use">
+                Warm a pea-sized amount between fingertips to activate lipid spheres...
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Hero Active Botanical Ingredients</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body" id="pdp-hero-ingredients">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Full INCI Formula Disclosure</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body" id="pdp-full-ingredients" style="font-size: 0.8rem; font-family: monospace;">
+                <!-- Full INCI list -->
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Ethical French Atelier Shipping & Packaging</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                Packaged in heavy 100% recyclable Italian frosted glass with protective aluminum seals. Ships carbon-neutrally in biodegradable mycelium packaging with complimentary deluxe samples.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Complete The Ritual Bundle Pairing -->
+      <section style="background-color: var(--color-bg-secondary); border-radius: var(--radius-md); padding: 3rem; margin-bottom: 5rem; border: 1px solid var(--color-border);">
+        <header class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-pretitle">The Master Pairing</span>
+          <h2 class="section-title" style="font-size: 2.2rem;">Complete The French Glow Ritual</h2>
+          <p class="section-subtext">Clinically synergistic when paired together for optimum cellular permeability.</p>
+        </header>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; align-items: center;" id="pdp-paired-bundle">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- Customer Reviews for this product -->
+      <section style="margin-bottom: 5rem;">
+        <header class="section-header">
+          <span class="section-pretitle">Patron Testimonials</span>
+          <h2 class="section-title">Verified Experiences</h2>
+        </header>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <h4 class="review-title">"Skin barrier restored in 48 hours"</h4>
+            <p class="review-text">"My dermatologist recommended lipid repair after laser resurfacing. Nothing soothed the heat and peeling like Lumière. It sinks in like liquid velvet without any irritation."</p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Reviewer" class="author-avatar">
+              <div class="author-info">
+                <h5>Margaux Laurent <span class="verified-badge">✓ Verified Buyer</span></h5>
+                <span>Paris, France</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <h4 class="review-title">"Worth every single euro"</h4>
+            <p class="review-text">"The texture alone is unforgettable. It feels like high-end cloud butter. My makeup glides over it seamlessly without pilling or excess shine."</p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Reviewer" class="author-avatar">
+              <div class="author-info">
+                <h5>Claire Vane <span class="verified-badge">✓ Verified Buyer</span></h5>
+                <span>Geneva, Switzerland</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <h3>Lumière Crème</h3>
+          <p>Haute botanic skincare engineered in France. Biomimetic ceramides, rare alpine flora, and uncompromising sustainability.</p>
+        </div>
+        <div class="footer-col">
+          <h4>The Formulations</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Barrier Creams</a></li>
+            <li><a href="routine.html">Skin Routine Quiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our House</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Botanical Heritage</a></li>
+            <li><a href="contact.html">Virtual Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html#faq">FAQ & Guidance</a></li>
+            <li><a href="cart.html">Shopping Bag</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumière Crème Paris. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Bag (<span id="cart-drawer-count">0</span>)</h3>
+      <button class="cart-drawer-close" id="cart-drawer-close">&times;</button>
+    </div>
+    <div class="shipping-progress-banner">
+      <p class="shipping-text" id="free-shipping-text">Add $80.00 more to unlock Free Luxury Shipping!</p>
+      <div class="progress-track">
+        <div class="progress-fill" id="free-shipping-progress" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="cart-drawer-items" id="cart-drawer-items"></div>
+    <div class="cart-drawer-empty" id="cart-drawer-empty" style="display: none;">
+      <h4>Your Bag is Empty</h4>
+      <p>Discover our barrier-replenishing creams to commence your radiant ritual.</p>
+    </div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-drawer-subtotal-row">
+        <span class="subtotal-label">Subtotal</span>
+        <span class="subtotal-val" id="cart-drawer-subtotal">$0.00</span>
+      </div>
+      <div class="cart-drawer-actions">
+        <a href="cart.html" class="btn btn-luxury-primary">View Bag & Checkout</a>
+        <button class="btn btn-secondary-outline" onclick="closeCartDrawer()">Continue Exploring</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer & Search Modal -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600;">Lumière Crème</span>
+      <button class="mobile-nav-close" style="font-size: 1.8rem;">&times;</button>
+    </div>
+    <div class="mobile-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">The Creams</a>
+      <a href="routine.html">Skin Routine Quiz</a>
+      <a href="about.html">Our Heritage</a>
+      <a href="contact.html">Consultation</a>
+      <a href="cart.html">My Shopping Bag</a>
+    </div>
+  </div>
+
+  <div class="modal-backdrop-blur" id="search-overlay"></div>
+  <div class="search-modal" id="search-modal">
+    <div class="container container-narrow">
+      <div style="display: flex; justify-content: flex-end;">
+        <button class="search-modal-close" id="search-modal-close">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="global-search-input" placeholder="Search formulations, ceramides, textures...">
+      </div>
+      <div class="search-results-list" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    let currentProduct = null;
+
+    function initProductDetailPage() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const prodId = urlParams.get('id') || 'lumiere-velvet-creme';
+      currentProduct = PRODUCTS_DATA.find(p => p.id === prodId) || PRODUCTS_DATA[0];
+
+      document.title = `${currentProduct.name} | LUMIÈRE CRÈME PARIS`;
+      
+      // Update DOM
+      document.getElementById('breadcrumb-current-product').textContent = currentProduct.name;
+      document.getElementById('pdp-name').textContent = currentProduct.name;
+      document.getElementById('pdp-subtitle').textContent = currentProduct.subtitle;
+      document.getElementById('pdp-category-tag').textContent = currentProduct.categoryName;
+      
+      const badgeTag = document.getElementById('pdp-badge-tag');
+      if (currentProduct.badge) {
+        badgeTag.textContent = currentProduct.badge;
+        badgeTag.style.display = 'inline-block';
+      } else {
+        badgeTag.style.display = 'none';
+      }
+
+      document.getElementById('pdp-rating-num').textContent = currentProduct.rating;
+      document.getElementById('pdp-review-count').textContent = `(${currentProduct.reviewsCount} reviews)`;
+      document.getElementById('pdp-price').textContent = `$${currentProduct.price.toFixed(2)}`;
+      document.getElementById('pdp-btn-price').textContent = `$${currentProduct.price.toFixed(2)}`;
+      
+      const origPriceEl = document.getElementById('pdp-original-price');
+      if (currentProduct.originalPrice) {
+        origPriceEl.textContent = `$${currentProduct.originalPrice.toFixed(2)}`;
+        origPriceEl.style.display = 'inline';
+      } else {
+        origPriceEl.style.display = 'none';
+      }
+
+      document.getElementById('pdp-size').textContent = currentProduct.size;
+      document.getElementById('pdp-description').textContent = currentProduct.description;
+      document.getElementById('pdp-texture').textContent = currentProduct.texture;
+      document.getElementById('pdp-scent').textContent = currentProduct.scent;
+      document.getElementById('pdp-how-to-use').textContent = currentProduct.howToUse;
+      document.getElementById('pdp-full-ingredients').textContent = currentProduct.fullIngredients;
+
+      // Gallery setup
+      const mainImg = document.getElementById('pdp-main-img');
+      mainImg.src = currentProduct.images[0];
+      mainImg.alt = currentProduct.name;
+
+      const thumbsContainer = document.getElementById('pdp-thumbs');
+      thumbsContainer.innerHTML = currentProduct.images.map((img, idx) => `
+        <button class="pdp-thumb-btn ${idx === 0 ? 'active' : ''}" onclick="swapPdpGallery('${img}', this)">
+          <img src="${img}" alt="Thumbnail ${idx + 1}">
+        </button>
+      `).join('');
+
+      // Key Benefits
+      const benefitsContainer = document.getElementById('pdp-benefits');
+      benefitsContainer.innerHTML = currentProduct.keyBenefits.map(b => `
+        <div class="highlight-item">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>${b}</span>
+        </div>
+      `).join('');
+
+      // Hero Ingredients Accordion
+      const heroIngrContainer = document.getElementById('pdp-hero-ingredients');
+      heroIngrContainer.innerHTML = currentProduct.heroIngredients.map(ing => `
+        <div style="margin-bottom: 0.8rem;">
+          <strong style="color: var(--color-text-dark);">${ing.name}:</strong>
+          <span>${ing.benefit}</span>
+        </div>
+      `).join('');
+
+      // Wishlist button state
+      const wishlistBtn = document.getElementById('pdp-wishlist-toggle');
+      if (getWishlist().includes(currentProduct.id)) {
+        wishlistBtn.classList.add('active');
+      }
+
+      // Populate paired bundle
+      populatePairedBundle();
+    }
+
+    function swapPdpGallery(src, btn) {
+      document.getElementById('pdp-main-img').src = src;
+      document.querySelectorAll('.pdp-thumb-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function increasePdpQty() {
+      const input = document.getElementById('pdp-qty-input');
+      const val = parseInt(input.value || 1, 10) + 1;
+      input.value = val;
+      updatePdpBtnPrice(val);
+    }
+
+    function decreasePdpQty() {
+      const input = document.getElementById('pdp-qty-input');
+      const val = parseInt(input.value || 1, 10);
+      if (val > 1) {
+        input.value = val - 1;
+        updatePdpBtnPrice(val - 1);
+      }
+    }
+
+    function updatePdpBtnPrice(qty) {
+      if (!currentProduct) return;
+      document.getElementById('pdp-btn-price').textContent = `$${(currentProduct.price * qty).toFixed(2)}`;
+    }
+
+    function submitPdpAdd() {
+      if (!currentProduct) return;
+      const qty = parseInt(document.getElementById('pdp-qty-input').value, 10) || 1;
+      addToCart(currentProduct.id, qty);
+    }
+
+    function buyNowPdp() {
+      submitPdpAdd();
+      window.location.href = 'cart.html';
+    }
+
+    function togglePdpWishlist() {
+      if (!currentProduct) return;
+      const btn = document.getElementById('pdp-wishlist-toggle');
+      toggleWishlist(currentProduct.id, btn);
+    }
+
+    function toggleAccordion(btn) {
+      const item = btn.closest('.accordion-item');
+      item.classList.toggle('open');
+    }
+
+    function populatePairedBundle() {
+      const container = document.getElementById('pdp-paired-bundle');
+      if (!container) return;
+      const others = PRODUCTS_DATA.filter(p => p.id !== currentProduct.id).slice(0, 3);
+      container.innerHTML = others.map(p => `
+        <div style="background: #FFFFFF; padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); display: flex; gap: 1rem; align-items: center;">
+          <img src="${p.images[0]}" style="width: 70px; height: 75px; object-fit: cover; border-radius: 4px;" alt="${p.name}">
+          <div>
+            <h5 style="font-size: 1rem; margin-bottom: 0.2rem;"><a href="product-detail.html?id=${p.id}">${p.name}</a></h5>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted); display: block; margin-bottom: 0.4rem;">${p.categoryName}</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+              <strong style="font-size: 0.95rem;">$${p.price.toFixed(2)}</strong>
+              <button class="btn btn-luxury-primary" style="padding: 0.35rem 0.8rem; font-size: 0.72rem;" onclick="addToCart('${p.id}', 1)">+ Add</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', initProductDetailPage);
+  </script>
+</body>
+</html>

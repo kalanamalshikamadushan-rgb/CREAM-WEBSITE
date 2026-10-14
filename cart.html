@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shopping Bag | LUMIÈRE CRÈME PARIS</title>
+  <meta name="description" content="Review your curated selection of luxury barrier creams and checkout securely with complimentary white glove shipping.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container">
+      <div class="announcement-messages">
+        <div class="announcement-msg active">
+          ✨ Complimentary Express Shipping on Orders Over $80 • Clean French Formulation
+        </div>
+        <div class="announcement-msg">
+          Use VIP Code <strong>GLOW20</strong> for 20% Off Your First Ritual Purchase
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Luxury Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">The Creams</a>
+            <a href="routine.html" class="nav-link">Skin Quiz</a>
+            <a href="about.html" class="nav-link">Our Heritage</a>
+            <a href="contact.html" class="nav-link">Consultation</a>
+          </nav>
+        </div>
+
+        <div class="brand-logo">
+          <a href="index.html">
+            <span class="logo-main">Lumière Crème</span>
+            <span class="logo-tagline">Paris • Haute Botanique</span>
+          </a>
+        </div>
+
+        <div class="header-actions">
+          <button class="action-icon-btn open-search-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <a href="products.html" class="action-icon-btn" title="Saved Wishlist" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-badge-count" style="display: none;">0</span>
+          </a>
+
+          <button class="action-icon-btn open-cart-btn" aria-label="Shopping bag">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="badge-count cart-badge-count" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb-nav">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Your Shopping Bag</span>
+    </div>
+
+    <section class="cart-page-section">
+      <header class="section-header" style="text-align: left; margin-bottom: 2rem;">
+        <span class="section-pretitle">Your Curated Ritual</span>
+        <h1 class="section-title">Review Your Bag (<span id="cart-page-item-count">0</span>)</h1>
+      </header>
+
+      <!-- Free Shipping Banner -->
+      <div class="shipping-progress-banner" style="border-radius: var(--radius-sm); margin-bottom: 2.5rem; border: 1px solid var(--color-border);">
+        <p class="shipping-text" id="cart-page-shipping-text">Add $80.00 more to unlock Free Luxury Shipping!</p>
+        <div class="progress-track" style="height: 6px;">
+          <div class="progress-fill" id="cart-page-shipping-progress" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Layout: Cart Table + Order Summary -->
+      <div class="cart-layout" id="cart-page-content">
+        <!-- Cart Table -->
+        <div class="cart-items-wrapper">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th style="width: 50%;">Formulation</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cart-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+
+          <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <a href="products.html" class="btn btn-secondary-outline">
+              &larr; Continue Exploring Creams
+            </a>
+            <button class="btn btn-secondary-outline" onclick="clearCart()" style="color: #A39B92; border-color: #E8E2D8;">
+              Empty Bag
+            </button>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <aside class="cart-order-summary">
+          <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem;">Order Summary</h3>
+          
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summary-subtotal">$0.00</span>
+          </div>
+
+          <div class="summary-row" id="summary-discount-row" style="display: none; color: #2E7D32;">
+            <span id="summary-discount-label">VIP Discount</span>
+            <span id="summary-discount-val">-$0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Complimentary Express Shipping</span>
+            <span id="summary-shipping">Calculated</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Estimated Sales Tax (Included)</span>
+            <span>$0.00</span>
+          </div>
+
+          <!-- Promo Code Box -->
+          <form class="promo-form" onsubmit="handleApplyPromo(event)">
+            <input type="text" id="promo-code-input" class="form-control" placeholder="Promo code (e.g. GLOW20)" style="font-size: 0.85rem; padding: 0.6rem 0.8rem; text-transform: uppercase;">
+            <button type="submit" class="btn btn-secondary-outline" style="padding: 0.6rem 1rem; font-size: 0.78rem;">Apply</button>
+          </form>
+          <div id="promo-applied-badge" style="display: none; font-size: 0.8rem; color: #2E7D32; margin-bottom: 1rem; align-items: center; justify-content: space-between;">
+            <span id="promo-badge-text">✓ GLOW20 applied (-20%)</span>
+            <button type="button" onclick="handleRemovePromo()" style="color: #E24B4B; text-decoration: underline; font-size: 0.75rem;">Remove</button>
+          </div>
+
+          <!-- Gift wrap option -->
+          <div style="margin: 1.2rem 0; padding: 0.8rem; background: #FFFFFF; border-radius: var(--radius-sm); border: 1px solid var(--color-border);">
+            <label style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; cursor: pointer;">
+              <input type="checkbox" id="gift-wrap-toggle" checked style="accent-color: var(--color-gold);">
+              <span>Complimentary Parisian Gift Ribbon & Note</span>
+            </label>
+          </div>
+
+          <div class="summary-row total">
+            <span>Estimated Total</span>
+            <span id="summary-grand-total">$0.00</span>
+          </div>
+
+          <button class="btn btn-luxury-primary lg" style="width: 100%; margin-top: 1.5rem;" onclick="openCheckoutModal()">
+            Proceed to Secure Checkout
+          </button>
+
+          <div style="text-align: center; margin-top: 1.5rem; font-size: 0.75rem; color: var(--color-text-muted);">
+            🔒 256-Bit SSL Encrypted Checkout • 30-Day French Glow Guarantee
+          </div>
+        </aside>
+      </div>
+
+      <!-- Empty State -->
+      <div id="cart-page-empty" style="display: none; text-align: center; padding: 5rem 1rem;">
+        <h2 style="font-size: 2.2rem; margin-bottom: 0.8rem;">Your Shopping Bag is Empty</h2>
+        <p style="color: var(--color-text-muted); max-width: 480px; margin: 0 auto 2rem;">
+          Your skin barrier deserves the finest botanical nourishment. Explore our award-winning face creams and overnight balms.
+        </p>
+        <a href="products.html" class="btn btn-luxury-primary lg">
+          Explore The Creams &rarr;
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Checkout Multi-Step Modal -->
+  <div class="modal-backdrop-blur" id="checkout-backdrop" onclick="closeCheckoutModal()"></div>
+  <div class="checkout-modal" id="checkout-modal">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <h3 style="font-size: 1.6rem;" id="checkout-modal-title">Express Luxury Checkout</h3>
+      <button onclick="closeCheckoutModal()" style="font-size: 1.6rem;">&times;</button>
+    </div>
+
+    <!-- Step 1: Shipping Details -->
+    <div id="checkout-step-1">
+      <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+        Please enter your courier delivery address:
+      </p>
+      <form onsubmit="handleShippingSubmit(event)">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <input type="text" class="form-control" required placeholder="First Name" value="Geneviève">
+          <input type="text" class="form-control" required placeholder="Last Name" value="Laurent">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" required placeholder="Email Address for Tracking" value="genevieve@example.com">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" required placeholder="Street Address" value="24 Boulevard Haussmann">
+        </div>
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+          <input type="text" class="form-control" required placeholder="City" value="Paris">
+          <input type="text" class="form-control" required placeholder="Postal Code" value="75009">
+          <input type="text" class="form-control" required placeholder="Country" value="France">
+        </div>
+        <button type="submit" class="btn btn-luxury-primary" style="width: 100%;">
+          Continue to Payment &rarr;
+        </button>
+      </form>
+    </div>
+
+    <!-- Step 2: Payment Simulation -->
+    <div id="checkout-step-2" style="display: none;">
+      <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+        Select Payment Method (Simulation Mode):
+      </p>
+      <div style="border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem;">
+        <label style="display: flex; align-items: center; gap: 0.8rem; font-weight: 600;">
+          <input type="radio" name="pay-method" checked style="accent-color: var(--color-gold);">
+          <span>Credit / Debit Card (Visa, Mastercard, Amex)</span>
+        </label>
+        <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.8rem;">
+          <input type="text" class="form-control" value="•••• •••• •••• 4242" readonly>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <input type="text" class="form-control" value="12/28" readonly>
+            <input type="text" class="form-control" value="982" readonly>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-luxury-primary lg" style="width: 100%;" onclick="completeCheckout()">
+        Place Order & Authorize Payment
+      </button>
+    </div>
+
+    <!-- Step 3: Success Confirmation -->
+    <div id="checkout-step-3" style="display: none; text-align: center; padding: 1.5rem 0;">
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">✨</div>
+      <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Merci Pour Votre Confiance!</h3>
+      <p style="color: var(--color-text-body); font-size: 0.95rem; margin-bottom: 1rem;">
+        Your luxury skincare ritual has been dispatched to our Paris atelier team.
+      </p>
+      <div style="background: var(--color-bg-secondary); padding: 1.2rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.88rem;">
+        <div><strong>Order Reference:</strong> <span id="checkout-order-number" style="color: var(--color-gold); font-family: monospace;">LUM-2026-84920</span></div>
+        <div style="margin-top: 0.4rem;">Estimated White-Glove Delivery: <strong>2 - 3 Business Days</strong></div>
+      </div>
+      <button class="btn btn-luxury-primary" onclick="finishOrderAndRedirect()">
+        Back to Home Sanctuary
+      </button>
+    </div>
+  </div>
+
+  <!-- Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <h3>Lumière Crème</h3>
+          <p>Haute botanic skincare engineered in France. Biomimetic ceramides, rare alpine flora, and uncompromising sustainability.</p>
+        </div>
+        <div class="footer-col">
+          <h4>The Formulations</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Barrier Creams</a></li>
+            <li><a href="routine.html">Skin Routine Quiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our House</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Botanical Heritage</a></li>
+            <li><a href="contact.html">Virtual Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html#faq">FAQ & Guidance</a></li>
+            <li><a href="cart.html">Shopping Bag</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumière Crème Paris. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Bag (<span id="cart-drawer-count">0</span>)</h3>
+      <button class="cart-drawer-close" id="cart-drawer-close">&times;</button>
+    </div>
+    <div class="shipping-progress-banner">
+      <p class="shipping-text" id="free-shipping-text">Add $80.00 more to unlock Free Luxury Shipping!</p>
+      <div class="progress-track">
+        <div class="progress-fill" id="free-shipping-progress" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="cart-drawer-items" id="cart-drawer-items"></div>
+    <div class="cart-drawer-empty" id="cart-drawer-empty" style="display: none;">
+      <h4>Your Bag is Empty</h4>
+    </div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-drawer-subtotal-row">
+        <span class="subtotal-label">Subtotal</span>
+        <span class="subtotal-val" id="cart-drawer-subtotal">$0.00</span>
+      </div>
+      <div class="cart-drawer-actions">
+        <a href="cart.html" class="btn btn-luxury-primary">View Bag & Checkout</a>
+        <button class="btn btn-secondary-outline" onclick="closeCartDrawer()">Continue Exploring</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer & Search Modal -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600;">Lumière Crème</span>
+      <button class="mobile-nav-close" style="font-size: 1.8rem;">&times;</button>
+    </div>
+    <div class="mobile-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">The Creams</a>
+      <a href="routine.html">Skin Routine Quiz</a>
+      <a href="about.html">Our Heritage</a>
+      <a href="contact.html">Consultation</a>
+      <a href="cart.html">My Shopping Bag</a>
+    </div>
+  </div>
+
+  <div class="modal-backdrop-blur" id="search-overlay"></div>
+  <div class="search-modal" id="search-modal">
+    <div class="container container-narrow">
+      <div style="display: flex; justify-content: flex-end;">
+        <button class="search-modal-close" id="search-modal-close">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="global-search-input" placeholder="Search formulations, ceramides, textures...">
+      </div>
+      <div class="search-results-list" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    function renderFullCartPage() {
+      const cart = getCart();
+      const count = getCartCount();
+      const subtotal = getCartSubtotal();
+      const tableBody = document.getElementById('cart-table-body');
+      const layout = document.getElementById('cart-page-content');
+      const emptyBox = document.getElementById('cart-page-empty');
+      const countEl = document.getElementById('cart-page-item-count');
+      const progressFill = document.getElementById('cart-page-shipping-progress');
+      const shippingText = document.getElementById('cart-page-shipping-text');
+
+      if (countEl) countEl.textContent = count;
+
+      // Free shipping bar
+      if (progressFill && shippingText) {
+        const diff = FREE_SHIPPING_THRESHOLD - subtotal;
+        if (diff <= 0) {
+          progressFill.style.width = '100%';
+          shippingText.innerHTML = `🎉 <strong>Complimentary Express Shipping</strong> Unlocked!`;
+        } else {
+          const pct = Math.min(100, Math.max(0, (subtotal / FREE_SHIPPING_THRESHOLD) * 100));
+          progressFill.style.width = `${pct}%`;
+          shippingText.innerHTML = `Add <strong>$${diff.toFixed(2)}</strong> more to enjoy Free Luxury Shipping!`;
+        }
+      }
+
+      if (cart.length === 0) {
+        if (layout) layout.style.display = 'none';
+        if (emptyBox) emptyBox.style.display = 'block';
+        return;
+      }
+
+      if (layout) layout.style.display = 'grid';
+      if (emptyBox) emptyBox.style.display = 'none';
+
+      if (tableBody) {
+        tableBody.innerHTML = cart.map(item => `
+          <tr>
+            <td>
+              <div class="cart-product-cell">
+                <div class="cart-prod-thumb">
+                  <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div>
+                  <h4 style="font-size: 1.15rem; margin-bottom: 0.2rem;">
+                    <a href="product-detail.html?id=${item.id}">${item.name}</a>
+                  </h4>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">${item.subtitle} • ${item.size}</span>
+                </div>
+              </div>
+            </td>
+            <td><strong>$${item.price.toFixed(2)}</strong></td>
+            <td>
+              <div class="qty-selector small">
+                <button class="qty-btn" onclick="updateQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                <span class="qty-value">${item.quantity}</span>
+                <button class="qty-btn" onclick="updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
+              </div>
+            </td>
+            <td><strong>$${(item.price * item.quantity).toFixed(2)}</strong></td>
+            <td>
+              <button onclick="removeFromCart('${item.id}')" style="color: var(--color-text-light); font-size: 1.2rem;" title="Remove">&times;</button>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      // Calculations
+      document.getElementById('summary-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+      
+      const promo = getAppliedPromo();
+      const discountRow = document.getElementById('summary-discount-row');
+      const promoBadge = document.getElementById('promo-applied-badge');
+      let discountAmount = 0;
+
+      if (promo) {
+        discountAmount = subtotal * (promo.discountPercent / 100);
+        discountRow.style.display = 'flex';
+        document.getElementById('summary-discount-label').textContent = `${promo.description} (${promo.discountPercent}%)`;
+        document.getElementById('summary-discount-val').textContent = `-$${discountAmount.toFixed(2)}`;
+        
+        if (promoBadge) {
+          promoBadge.style.display = 'flex';
+          document.getElementById('promo-badge-text').textContent = `✓ ${promo.code} Applied (${promo.discountPercent}% Off)`;
+        }
+      } else {
+        if (discountRow) discountRow.style.display = 'none';
+        if (promoBadge) promoBadge.style.display = 'none';
+      }
+
+      const shippingEl = document.getElementById('summary-shipping');
+      if (subtotal >= FREE_SHIPPING_THRESHOLD) {
+        shippingEl.innerHTML = '<span style="color: #2E7D32; font-weight: 600;">FREE</span>';
+      } else {
+        shippingEl.textContent = '$12.00';
+      }
+
+      const grandTotal = Math.max(0, subtotal - discountAmount + (subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : 12.00));
+      document.getElementById('summary-grand-total').textContent = `$${grandTotal.toFixed(2)}`;
+    }
+
+    function handleApplyPromo(e) {
+      e.preventDefault();
+      const input = document.getElementById('promo-code-input');
+      const code = input ? input.value : '';
+      const result = applyPromoCode(code);
+      if (result.success) {
+        showGenericToast(result.message);
+        renderFullCartPage();
+      } else {
+        alert(result.message);
+      }
+    }
+
+    function handleRemovePromo() {
+      removePromoCode();
+      renderFullCartPage();
+      showGenericToast("Promo code removed.");
+    }
+
+    function openCheckoutModal() {
+      document.getElementById('checkout-backdrop').classList.add('active');
+      document.getElementById('checkout-modal').classList.add('active');
+      document.getElementById('checkout-step-1').style.display = 'block';
+      document.getElementById('checkout-step-2').style.display = 'none';
+      document.getElementById('checkout-step-3').style.display = 'none';
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkout-backdrop').classList.remove('active');
+      document.getElementById('checkout-modal').classList.remove('active');
+    }
+
+    function handleShippingSubmit(e) {
+      e.preventDefault();
+      document.getElementById('checkout-step-1').style.display = 'none';
+      document.getElementById('checkout-step-2').style.display = 'block';
+    }
+
+    function completeCheckout() {
+      const orderNum = 'LUM-' + new Date().getFullYear() + '-' + Math.floor(10000 + Math.random() * 90000);
+      document.getElementById('checkout-order-number').textContent = orderNum;
+      document.getElementById('checkout-step-2').style.display = 'none';
+      document.getElementById('checkout-step-3').style.display = 'block';
+      clearCart();
+    }
+
+    function finishOrderAndRedirect() {
+      closeCheckoutModal();
+      window.location.href = 'index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFullCartPage();
+    });
+  </script>
+</body>
+</html>

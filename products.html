@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cream Collection | LUMIÈRE CRÈME PARIS</title>
+  <meta name="description" content="Explore our complete collection of luxury face creams, night balms, eye contour creams, and barrier treatments. Formulated with biomimetic ceramides and alpine botanicals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Special Offers">
+    <div class="container">
+      <div class="announcement-messages">
+        <div class="announcement-msg active">
+          ✨ Complimentary Express Shipping on Orders Over $80 • Clean French Formulation
+        </div>
+        <div class="announcement-msg">
+          Use VIP Code <strong>GLOW20</strong> for 20% Off Your First Ritual Purchase
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Luxury Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" aria-label="Open navigation menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+          <nav class="nav-links" aria-label="Main Navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link active">The Creams</a>
+            <a href="routine.html" class="nav-link">Skin Quiz</a>
+            <a href="about.html" class="nav-link">Our Heritage</a>
+            <a href="contact.html" class="nav-link">Consultation</a>
+          </nav>
+        </div>
+
+        <div class="brand-logo">
+          <a href="index.html">
+            <span class="logo-main">Lumière Crème</span>
+            <span class="logo-tagline">Paris • Haute Botanique</span>
+          </a>
+        </div>
+
+        <div class="header-actions">
+          <button class="action-icon-btn open-search-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <a href="products.html" class="action-icon-btn" title="Saved Wishlist" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-badge-count" style="display: none;">0</span>
+          </a>
+
+          <button class="action-icon-btn open-cart-btn" aria-label="Shopping bag">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="badge-count cart-badge-count" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Shop Hero Banner -->
+    <section class="shop-hero-header">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>The Creams Collection</span>
+        </div>
+        <span class="section-pretitle">Haute Formulation</span>
+        <h1 class="section-title">The Complete Botanical Dispensary</h1>
+        <p class="section-subtext" style="max-width: 620px; margin: 0 auto;">
+          Formulated without parabens, synthetic fragrances, or silicones. Pure botanical actives formulated with biomimetic lipid precision.
+        </p>
+      </div>
+    </section>
+
+    <!-- Shop Layout: Sidebar + Grid -->
+    <section class="container">
+      <div class="shop-layout">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar">
+          <div class="filter-group">
+            <h4 class="filter-title">Category</h4>
+            <div class="filter-options-list">
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-category" value="all" checked onchange="filterProducts()">
+                <span>All Formulations</span>
+                <span class="filter-count">(8)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-category" value="face-creams" onchange="filterProducts()">
+                <span>Barrier Face Creams</span>
+                <span class="filter-count">(3)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-category" value="night-creams" onchange="filterProducts()">
+                <span>Night Balms & Renewal</span>
+                <span class="filter-count">(1)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-category" value="eye-creams" onchange="filterProducts()">
+                <span>Eye Contour Balms</span>
+                <span class="filter-count">(1)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-category" value="serums" onchange="filterProducts()">
+                <span>Bio-Active Serums</span>
+                <span class="filter-count">(1)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-category" value="body-creams" onchange="filterProducts()">
+                <span>Velvet Body Care</span>
+                <span class="filter-count">(1)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4 class="filter-title">Skin Concern</h4>
+            <div class="filter-options-list">
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-skintype" value="all" checked onchange="filterProducts()">
+                <span>All Skin Concerns</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-skintype" value="dry" onchange="filterProducts()">
+                <span>Dry & Dehydrated</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-skintype" value="mature" onchange="filterProducts()">
+                <span>Fine Lines & Firmness</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-skintype" value="sensitive" onchange="filterProducts()">
+                <span>Sensitive & Reactive</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-skintype" value="oily" onchange="filterProducts()">
+                <span>Oily & Congested</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4 class="filter-title">Price Range</h4>
+            <div class="filter-options-list">
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-price" value="all" checked onchange="filterProducts()">
+                <span>All Prices</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-price" value="under-75" onchange="filterProducts()">
+                <span>Under $75</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-price" value="75-90" onchange="filterProducts()">
+                <span>$75 — $90</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="filter-price" value="over-90" onchange="filterProducts()">
+                <span>$90 & Above</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-secondary-outline" onclick="resetAllFilters()" style="width: 100%;">
+            Reset All Filters
+          </button>
+        </aside>
+
+        <!-- Main Product Area -->
+        <div class="shop-main">
+          <!-- Toolbar -->
+          <div class="shop-toolbar">
+            <div class="toolbar-count">
+              Showing <strong id="product-count-display">8</strong> botanical creations
+            </div>
+
+            <div class="toolbar-controls">
+              <label for="sort-select" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted);">Sort By:</label>
+              <select id="sort-select" class="sort-select" onchange="sortProducts()">
+                <option value="featured">Featured Curations</option>
+                <option value="rating">Highest Rated (5.0★)</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="products-grid" id="catalog-products-grid">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Empty State -->
+          <div id="catalog-empty-state" style="display: none; text-align: center; padding: 4rem 1rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">No Formulations Found</h3>
+            <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">Try adjusting your selected category or skin type filters.</p>
+            <button class="btn btn-luxury-primary" onclick="resetAllFilters()">View All Creams</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <h3>Lumière Crème</h3>
+          <p>Haute botanic skincare engineered in France. Biomimetic ceramides, rare alpine flora, and uncompromising sustainability.</p>
+          <div style="font-size: 0.85rem; color: var(--color-gold);">
+            📍 18 Place Vendôme, 75001 Paris, France
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>The Formulations</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Barrier Creams</a></li>
+            <li><a href="products.html?category=night-creams">Overnight Balms</a></li>
+            <li><a href="products.html?category=eye-creams">Eye Contour Creams</a></li>
+            <li><a href="routine.html">Skin Routine Quiz</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our House</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Botanical Heritage</a></li>
+            <li><a href="about.html#science">Biomimetic Science</a></li>
+            <li><a href="about.html#sustainability">Refillable Glass Pledge</a></li>
+            <li><a href="contact.html">Virtual Skin Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html#faq">FAQ & Skin Guidance</a></li>
+            <li><a href="cart.html">View Shopping Bag</a></li>
+            <li><a href="contact.html">Complimentary Consultations</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumière Crème Paris. All rights reserved. Clean French Formulation.</p>
+        <div class="footer-certifications">
+          <span>🌿 100% Vegan</span>
+          <span>🐰 Leaping Bunny Certified</span>
+          <span>♻️ Recyclable Glass</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Bag (<span id="cart-drawer-count">0</span>)</h3>
+      <button class="cart-drawer-close" id="cart-drawer-close">&times;</button>
+    </div>
+    <div class="shipping-progress-banner">
+      <p class="shipping-text" id="free-shipping-text">Add $80.00 more to unlock Free Luxury Shipping!</p>
+      <div class="progress-track">
+        <div class="progress-fill" id="free-shipping-progress" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="cart-drawer-items" id="cart-drawer-items"></div>
+    <div class="cart-drawer-empty" id="cart-drawer-empty" style="display: none;">
+      <h4>Your Bag is Empty</h4>
+      <p>Discover our barrier-replenishing creams to commence your radiant ritual.</p>
+    </div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-drawer-subtotal-row">
+        <span class="subtotal-label">Subtotal</span>
+        <span class="subtotal-val" id="cart-drawer-subtotal">$0.00</span>
+      </div>
+      <div class="cart-drawer-actions">
+        <a href="cart.html" class="btn btn-luxury-primary">View Bag & Checkout</a>
+        <button class="btn btn-secondary-outline" onclick="closeCartDrawer()">Continue Exploring</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer & Search Modal -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600;">Lumière Crème</span>
+      <button class="mobile-nav-close" style="font-size: 1.8rem;">&times;</button>
+    </div>
+    <div class="mobile-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">The Creams</a>
+      <a href="routine.html">Skin Routine Quiz</a>
+      <a href="about.html">Our Heritage</a>
+      <a href="contact.html">Consultation</a>
+      <a href="cart.html">My Shopping Bag</a>
+    </div>
+  </div>
+
+  <div class="modal-backdrop-blur" id="search-overlay"></div>
+  <div class="search-modal" id="search-modal">
+    <div class="container container-narrow">
+      <div style="display: flex; justify-content: flex-end;">
+        <button class="search-modal-close" id="search-modal-close">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="global-search-input" placeholder="Search formulations, ceramides, textures...">
+      </div>
+      <div class="search-results-list" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Catalog Filtering and Sorting
+    let activeProducts = [...PRODUCTS_DATA];
+
+    function renderCatalogGrid() {
+      const grid = document.getElementById('catalog-products-grid');
+      const empty = document.getElementById('catalog-empty-state');
+      const countEl = document.getElementById('product-count-display');
+
+      if (!grid) return;
+      if (countEl) countEl.textContent = activeProducts.length;
+
+      if (activeProducts.length === 0) {
+        grid.style.display = 'none';
+        if (empty) empty.style.display = 'block';
+      } else {
+        grid.style.display = 'grid';
+        if (empty) empty.style.display = 'none';
+        grid.innerHTML = activeProducts.map(p => generateProductCardHTML(p)).join('');
+      }
+    }
+
+    function filterProducts() {
+      const selectedCategory = document.querySelector('input[name="filter-category"]:checked')?.value || 'all';
+      const selectedSkinType = document.querySelector('input[name="filter-skintype"]:checked')?.value || 'all';
+      const selectedPrice = document.querySelector('input[name="filter-price"]:checked')?.value || 'all';
+
+      activeProducts = PRODUCTS_DATA.filter(prod => {
+        // Category check
+        if (selectedCategory !== 'all' && prod.category !== selectedCategory) {
+          return false;
+        }
+
+        // Skin Type check
+        if (selectedSkinType !== 'all' && !prod.skinType.includes(selectedSkinType) && !prod.skinType.includes('all')) {
+          return false;
+        }
+
+        // Price check
+        if (selectedPrice === 'under-75' && prod.price >= 75) return false;
+        if (selectedPrice === '75-90' && (prod.price < 75 || prod.price > 90)) return false;
+        if (selectedPrice === 'over-90' && prod.price <= 90) return false;
+
+        return true;
+      });
+
+      sortProducts(false);
+      renderCatalogGrid();
+    }
+
+    function sortProducts(shouldRender = true) {
+      const sortVal = document.getElementById('sort-select')?.value || 'featured';
+
+      if (sortVal === 'price-asc') {
+        activeProducts.sort((a, b) => a.price - b.price);
+      } else if (sortVal === 'price-desc') {
+        activeProducts.sort((a, b) => b.price - a.price);
+      } else if (sortVal === 'rating') {
+        activeProducts.sort((a, b) => b.rating - a.rating);
+      } else {
+        // featured default: bestsellers first
+        activeProducts.sort((a, b) => (b.isBestseller ? 1 : 0) - (a.isBestseller ? 1 : 0));
+      }
+
+      if (shouldRender) {
+        renderCatalogGrid();
+      }
+    }
+
+    function resetAllFilters() {
+      document.querySelector('input[name="filter-category"][value="all"]').checked = true;
+      document.querySelector('input[name="filter-skintype"][value="all"]').checked = true;
+      document.querySelector('input[name="filter-price"][value="all"]').checked = true;
+      document.getElementById('sort-select').value = 'featured';
+      filterProducts();
+    }
+
+    // Read URL query parameter for category if present
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('category');
+      if (catParam) {
+        const catRadio = document.querySelector(`input[name="filter-category"][value="${catParam}"]`);
+        if (catRadio) catRadio.checked = true;
+      }
+      filterProducts();
+    });
+  </script>
+</body>
+</html>

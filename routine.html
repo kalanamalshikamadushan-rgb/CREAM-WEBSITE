@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin Routine Diagnostic | LUMIÈRE CRÈME PARIS</title>
+  <meta name="description" content="Take our interactive clinical skin diagnosis to discover your customized 3-step cream regimen with biomimetic lipid precision.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container">
+      <div class="announcement-messages">
+        <div class="announcement-msg active">
+          ✨ Complimentary Express Shipping on Orders Over $80 • Clean French Formulation
+        </div>
+        <div class="announcement-msg">
+          Complete Ritual Bundles Receive an Automatic 15% Discount
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Luxury Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" aria-label="Open navigation menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">The Creams</a>
+            <a href="routine.html" class="nav-link active">Skin Quiz</a>
+            <a href="about.html" class="nav-link">Our Heritage</a>
+            <a href="contact.html" class="nav-link">Consultation</a>
+          </nav>
+        </div>
+
+        <div class="brand-logo">
+          <a href="index.html">
+            <span class="logo-main">Lumière Crème</span>
+            <span class="logo-tagline">Paris • Haute Botanique</span>
+          </a>
+        </div>
+
+        <div class="header-actions">
+          <button class="action-icon-btn open-search-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <a href="products.html" class="action-icon-btn" title="Saved Wishlist" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count wishlist-badge-count" style="display: none;">0</span>
+          </a>
+
+          <button class="action-icon-btn open-cart-btn" aria-label="Shopping bag">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="badge-count cart-badge-count" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Quiz Hero Section -->
+    <section class="shop-hero-header">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Skin Routine Diagnostic</span>
+        </div>
+        <span class="section-pretitle">Bespoke Skincare Prescription</span>
+        <h1 class="section-title">Discover Your Tailored Botanical Regimen</h1>
+        <p class="section-subtext" style="max-width: 620px; margin: 0 auto;">
+          Answer 3 brief questions regarding your skin barrier, daily micro-stressors, and texture preferences to uncover your personalized French glow routine.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Quiz Container -->
+    <section class="container" style="padding: 2rem 0 6rem;">
+      <div id="skin-quiz-wrapper">
+        <!-- Rendered by js/quiz.js -->
+      </div>
+    </section>
+
+    <!-- Why Biomimetic Routines Work -->
+    <section class="clinical-section" style="background-color: var(--color-bg-secondary); border-top: 1px solid var(--color-border-light);">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-pretitle">The Science of Layering</span>
+          <h2 class="section-title">The Three Sacred Steps of Parisian Radiance</h2>
+          <p class="section-subtext">
+            Skincare is not about overloading the dermis. It is about applying biomimetic actives in sequence of molecular weight.
+          </p>
+        </header>
+
+        <div class="usp-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="usp-card" style="background: #FFFFFF; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <div class="usp-icon" style="background-color: var(--color-gold-light); color: var(--color-gold);">01</div>
+            <div>
+              <h4>Infuse Deep Hydration</h4>
+              <p>Water-soluble multi-weight hyaluronic acid penetrates down to the dermis, providing the intercellular matrix with vital moisture reservoir.</p>
+            </div>
+          </div>
+
+          <div class="usp-card" style="background: #FFFFFF; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <div class="usp-icon" style="background-color: var(--color-gold-light); color: var(--color-gold);">02</div>
+            <div>
+              <h4>Fortify Lipid Barrier</h4>
+              <p>Our signature cream envelopes the epidermis in 5 biomimetic ceramides, locking in hydration while repelling environmental pollutants.</p>
+            </div>
+          </div>
+
+          <div class="usp-card" style="background: #FFFFFF; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <div class="usp-icon" style="background-color: var(--color-gold-light); color: var(--color-gold);">03</div>
+            <div>
+              <h4>Target Micro-Contours</h4>
+              <p>Delicate orbital zones receive diamond-peptide lifting and green coffee microcirculation to eliminate morning fatigue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <h3>Lumière Crème</h3>
+          <p>Haute botanic skincare engineered in France. Biomimetic ceramides, rare alpine flora, and uncompromising sustainability.</p>
+        </div>
+        <div class="footer-col">
+          <h4>The Formulations</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Barrier Creams</a></li>
+            <li><a href="routine.html">Skin Routine Quiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our House</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Botanical Heritage</a></li>
+            <li><a href="contact.html">Virtual Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html#faq">FAQ & Guidance</a></li>
+            <li><a href="cart.html">Shopping Bag</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumière Crème Paris. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Bag (<span id="cart-drawer-count">0</span>)</h3>
+      <button class="cart-drawer-close" id="cart-drawer-close">&times;</button>
+    </div>
+    <div class="shipping-progress-banner">
+      <p class="shipping-text" id="free-shipping-text">Add $80.00 more to unlock Free Luxury Shipping!</p>
+      <div class="progress-track">
+        <div class="progress-fill" id="free-shipping-progress" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="cart-drawer-items" id="cart-drawer-items"></div>
+    <div class="cart-drawer-empty" id="cart-drawer-empty" style="display: none;">
+      <h4>Your Bag is Empty</h4>
+      <p>Discover our barrier-replenishing creams to commence your radiant ritual.</p>
+    </div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-drawer-subtotal-row">
+        <span class="subtotal-label">Subtotal</span>
+        <span class="subtotal-val" id="cart-drawer-subtotal">$0.00</span>
+      </div>
+      <div class="cart-drawer-actions">
+        <a href="cart.html" class="btn btn-luxury-primary">View Bag & Checkout</a>
+        <button class="btn btn-secondary-outline" onclick="closeCartDrawer()">Continue Exploring</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer & Search Modal -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600;">Lumière Crème</span>
+      <button class="mobile-nav-close" style="font-size: 1.8rem;">&times;</button>
+    </div>
+    <div class="mobile-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">The Creams</a>
+      <a href="routine.html">Skin Routine Quiz</a>
+      <a href="about.html">Our Heritage</a>
+      <a href="contact.html">Consultation</a>
+      <a href="cart.html">My Shopping Bag</a>
+    </div>
+  </div>
+
+  <div class="modal-backdrop-blur" id="search-overlay"></div>
+  <div class="search-modal" id="search-modal">
+    <div class="container container-narrow">
+      <div style="display: flex; justify-content: flex-end;">
+        <button class="search-modal-close" id="search-modal-close">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="global-search-input" placeholder="Search formulations, ceramides, textures...">
+      </div>
+      <div class="search-results-list" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
